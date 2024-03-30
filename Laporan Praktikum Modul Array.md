@@ -36,6 +36,9 @@ Output :
 1
 ```
 
+**2) Array Dua Dimensi**
+
+Array dua dimensi adalah variabel yang terdiri dari kumpulan array satu dimensi dengan tipe sama yang disusun dalam baris dan kolom
 ## Guided 
 
 ### 1. [Nama Topik]
