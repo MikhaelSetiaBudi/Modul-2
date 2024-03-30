@@ -19,7 +19,6 @@ Contohnya, sebuah array satu dimensi yang berisi bilangan bulat {1, 2,
 hingga indeks 4 adalah elemen kelima.
 
 Contoh :
-
 ```C++
 #include <iostream>
 using namespace std;
@@ -38,7 +37,73 @@ Output :
 
 **2) Array Dua Dimensi**
 
-Array dua dimensi adalah variabel yang terdiri dari kumpulan array satu dimensi dengan tipe sama yang disusun dalam baris dan kolom
+Array dua dimensi adalah variabel yang terdiri dari kumpulan array satu dimensi dengan tipe sama yang disusun dalam baris dan kolom. Dalam array dua dimensi, setiap elemen memiliki dua indeks, yaitu indeks baris dan indeks kolom. Indeks baris menunjukkan posisi elemen dalam baris, sementara indeks kolom menunjukkan posisi elemen dalam kolom.
+
+Contoh :
+```C++
+#include <iostream>
+using namespace std;
+int main() {
+    int arr[2][2] = {{3, 2}, {2, 5}};
+    for (int i=0; i<2; i++) { //baris
+        for(int j=0; j<2; j++) { //kolom
+            cout<< arr[i][j] << ends;
+        };
+        cout << endl;
+    };
+}
+```
+
+Output :
+```C++
+3 2
+2 5
+```
+
+**3) Array Multidimensi**
+
+Array multimedia memiliki kesamaan dengan array satu dimensi dan dua dimensi, tetapi kapasitas memori lebih besar. Array ini digunakan untuk merepresentasikan array dengan dimensi lebih dari dua atau array yang memiliki lebih dari dua indeks, seperti array tiga dimensi, array empat dimensi, array lima dimensi, dan seterusnya. 
+
+Contoh :
+```C++
+#include <iostream>
+using namespace std;
+int main() {
+    int arr[2][2][3] = {{{2, 8, 7}, {6, 5, 1}}, {{8, 5, 2}, {9, 2 ,7}}};
+    for (int i=0; i<2; i++) {
+        for(int j=0; j<2; j++) {
+            for(int k=0; k<3; k++) {
+                cout<< arr[i][j][k] << ends;
+            };
+            cout<< endl;
+        };
+        cout<< endl;
+    };
+}
+```
+
+Output :
+```C++
+2 8 7
+6 5 1
+8 5 2
+9 2 7
+```
+
+**4) Array Empat Dimensi**
+
+Contoh :
+```C++
+int arr [3][2][4][4];
+```
+
+**5) Array Lima Dimensi**
+
+Contoh :
+```C++
+int arr [2][4][4][3][3];
+```
+
 ## Guided 
 
 ### 1. [Nama Topik]
