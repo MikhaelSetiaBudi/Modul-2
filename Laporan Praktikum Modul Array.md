@@ -194,14 +194,128 @@ for (int x = 0; x < 2; x++)
 ```
 Code diatas digunakan untuk menginput array. perulangan pertama pada variabel x dengan indeks 0 hingga 1 dikarenakan x < 2. jadi program akan berulang sampai mencapai 2 indeks yaitu indeks 0 dan 1. setiap perulangan selesai dieksekusi maka indek akan ditambah satu. begitupun dengan y dan z dengan indeks 0 hingga 2, jadi program akan berulang sampai mencampai indeks 2 yaitu indeks 0, 1, dan 2. setelah program dieksekusi maka akan mengulang dengan indeks ditambah satu. cout menampilkan pesan untuk meminta input elemen array pada posisi x, y, dan z yang sudah ditentukan. cin digunakan untuk mengambil input dari pengguna dan menyimpan dalam array pada posisi yang ditentukan oleh indeks x, y, dan z.
 
-perulangan pertama yang digunakan untuk mengatur indeks x dari 0 hingga 1. juga untuk mengontrol indeks array pada dimensi pertama. int x = 0 adalah mendeklarasikan variabel x sebagai integer dan menginisialisaikan dengan nilai 0. x < 2 digunakan agar perulangan akan terus berlanjut sampai nilai x kurang dari 2. x++ digunakan agar ketika loop selesai dieksekusi maka nilai x akan bertambah satu.
-
 **Code 5**
 ```C++
-
+for (int x = 0; x < 2; x++)
+    {
+        for (int y = 0; y < 3; y++)
+        {
+            for (int z = 0; z < 3; z++)
+            {
+                cout << "Data Array[" << x << "][" << y << "][" << z << "] = " << arr[x][y][z] << endl;
+            }
+        }
+    }
+    cout << endl;
 ```
-perulangan kedua yang digunakan untuk mengatur indeks y dari 0 hingga 2. juga untuk mengontrol indeks array pada dimensi kedua. int y = 0 adalah mendeklarasikan variabel y sebagai integer dan menginisialisaikan dengan nilai 0. y < 3 digunakan agar perulangan akan terus berlanjut sampai nilai x adalah 2. x++ digunakan agar ketika loop selesai dieksekusi maka nilai x akan bertambah satu.
+code diatas digunakan untuk menampilkan output array dengan indeks x akan berulang sampai mencapai indkes 1, lalu untuk y dan z akan berulang sampai indeks 2. setiap perulangan yang dieksekusi akan ditambah satu. cout digunakan untuk menampilkan output data array yang telah diinputkan oleh user sesuai posisi x, y, dan z yang sudah ditentukan.
 
+**Code 6**
+```C++
+    for (int x = 0; x < 2; x++)
+    {
+        for (int y = 0; y < 3; y++)
+        {
+            for (int z = 0; z < 3; z++)
+            {
+                cout << arr[x][y][z] << ends;
+            }
+            cout << endl;
+        }
+        cout << endl;
+    }
+```
+code diatas digunakan untuk menampilkan data array yang telah diinputkan oleh pengguna. dengan indeks x akan berulang sampai mencapai indkes 1, lalu untuk y dan z akan berulang sampai indeks 2. setiap perulangan yang dieksekusi akan ditambah satu. cout digunakan untuk menampilkan output data array yang telah diinputkan oleh user sesuai posisi x, y, dan z yang sudah ditentukan. fungsi ends digunakan untuk menambahkan karakter spasi di akhir setiap output elemen dalam baris yang sama.
+
+#### Output:
+```C++
+Input Array[0][0][0] = 6
+Input Array[0][0][1] = 7
+Input Array[0][0][2] = 2
+Input Array[0][1][0] = 3
+Input Array[0][1][1] = 1
+Input Array[0][1][2] = 5
+Input Array[0][2][0] = 2
+Input Array[0][2][1] = 8
+Input Array[0][2][2] = 4
+
+Input Array[1][0][0] = 9
+Input Array[1][0][1] = 4
+Input Array[1][0][2] = 5
+Input Array[1][1][0] = 2
+Input Array[1][1][1] = 7
+Input Array[1][1][2] = 5
+Input Array[1][2][0] = 3
+Input Array[1][2][1] = 5
+Input Array[1][2][2] = 6
+
+Data Array[0][0][0 = 6
+Data Array[0][0][1 = 7
+Data Array[0][0][2 = 2
+Data Array[0][1][0 = 3
+Data Array[0][1][1 = 1
+Data Array[0][1][2 = 5
+Data Array[0][2][0 = 2
+Data Array[0][2][1 = 8
+Data Array[0][2][2 = 4
+Data Array[1][0][0 = 9
+Data Array[1][0][1 = 4
+Data Array[1][0][2 = 5
+Data Array[1][1][0 = 2
+Data Array[1][1][1 = 7
+Data Array[1][1][2 = 5
+Data Array[1][2][0 = 3
+Data Array[1][2][1 = 5
+Data Array[1][2][2 = 6
+
+672
+315
+284
+
+275
+356
+```
+Pengguna memasukan input, setiap input dimasukkan maka indeks pada z akan bertambah sampai indeks ke 2 lalu ke indeks pada y sampai indeks ke 2 setelah itu ke indek pada x sampai indeks ke 2. setiap perulangan dieksekusi maka indeks ditambah satu.
+
+#### Full code Screenshot:
+
+![alt text](https://github.com/MikhaelSetiaBudi/Praktikum-Algoritma-Struktur-Data-Modul-2-Array/blob/master/Modul%202%20Alstrukdat/Code%20Guided%201%20Array.png?raw=true)
+
+#### Output Screenshot:
+
+![alt text](https://github.com/MikhaelSetiaBudi/Praktikum-Algoritma-Struktur-Data-Modul-2-Array/blob/master/Output%20Modul%202%20Alstrukdat/Output%20Guided%201%20Array.png?raw=true)
+
+### 2. Program Mencari Nilai Maksimal pada Array
+```C++
+#include <iostream>
+using namespace std;
+int main()
+{
+    int maks, a, i = 1, lokasi;
+    cout << "Masukkan panjang array: ";
+    cin >> a;
+    int array[a];
+    cout << "Masukkan " << a << " angka\n";
+    for (i = 0; i < a; i++)
+    {
+        cout << "Array ke-" << (i) << ": ";
+        cin >> array[i];
+    }
+    maks = array[0];
+    for ( i = 0; i < a; i++)
+    {
+        if (array[i] > maks)
+        {
+            maks = array[i];
+            lokasi = i;
+        }
+        
+    }
+    cout << "Nilai maksimum adalah " << maks << " berada di Array ke " << lokasi << endl;
+}
+```
+**Code 1**
+```C++
 
 ## Unguided 
 
