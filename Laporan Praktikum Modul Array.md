@@ -161,7 +161,7 @@ int main()
 #include <iostream>
 using namespace std;
 ```
-kode diatas digunakan untuk mendefinisikan header file iostream yang berisi definisi objek input dan output standar seperti cin, cout, cerr, dan clog. using namespace std digunakan untuk menggunakan namespace std.
+kode diatas digunakan untuk mendefinisikan header file iostream yang berisi definisi objek input dan output standar seperti cin, dan cout. using namespace std digunakan untuk menggunakan namespace std.
 
 **Code 2**
 ```C++
@@ -316,6 +316,27 @@ int main()
 ```
 **Code 1**
 ```C++
+#include <iostream>
+using namespace std;
+```
+kode diatas digunakan untuk mendefinisikan header file iostream yang berisi definisi objek input dan output standar seperti cin, dan cout. using namespace std digunakan untuk menggunakan namespace std.
+
+**Code 2**
+```C++
+int main()
+{
+}
+```
+digunakan sebagai fungsi utama dari program C++. program berjalan dalam fungsi ini. jadi di dalam fungsi int main() semua program akan berjalan dalam fungsi int main().
+
+**Code 3**
+```C++
+int maks, a, i = 1, lokasi;
+    cout << "Masukkan panjang array: ";
+    cin >> a;
+    int array[a];
+    cout << "Masukkan " << a << " angka\n";
+```
 
 ## Unguided 
 
