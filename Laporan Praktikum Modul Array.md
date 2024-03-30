@@ -106,31 +106,109 @@ int arr [2][4][4][3][3];
 
 ## Guided 
 
-### 1. [Nama Topik]
+### 1. Program Input Array Tiga Dimensi
 
 ```C++
 #include <iostream>
 using namespace std;
-
-int main() {
-    cout << "ini adalah file code guided praktikan" << endl;
-    return 0;
+// PROGRAM INPUT ARRAY 3 DIMENSI
+int main()
+{
+    // Deklarasi array
+    int arr[2][3][3];
+    // Input elemen
+    for (int x = 0; x < 2; x++)
+    {
+        for (int y = 0; y < 3; y++)
+        {
+            for (int z = 0; z < 3; z++)
+            {
+                cout << "Input Array[" << x << "][" << y << "][" << z << "] = ";
+                cin >> arr[x][y][z];
+            }
+        }
+        cout << endl;
+    }
+    // Output Array
+    for (int x = 0; x < 2; x++)
+    {
+        for (int y = 0; y < 3; y++)
+        {
+            for (int z = 0; z < 3; z++)
+            {
+                cout << "Data Array[" << x << "][" << y << "][" << z << "] = " << arr[x][y][z] << endl;
+            }
+        }
+    }
+    cout << endl;
+    // Tampilan array
+    for (int x = 0; x < 2; x++)
+    {
+        for (int y = 0; y < 3; y++)
+        {
+            for (int z = 0; z < 3; z++)
+            {
+                cout << arr[x][y][z] << ends;
+            }
+            cout << endl;
+        }
+        cout << endl;
+    }
 }
 ```
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+**Code 1**
+```C++
+#include <iostream>
+using namespace std;
+```
+kode diatas digunakan untuk mendefinisikan header file iostream yang berisi definisi objek input dan output standar seperti cin, cout, cerr, dan clog. using namespace std digunakan untuk menggunakan namespace std.
+
+**Code 2**
+```C++
+int main()
+{
+}
+```
+digunakan sebagai fungsi utama dari program C++. program berjalan dalam fungsi ini. jadi di dalam fungsi int main() semua program akan berjalan dalam fungsi int main().
+
+**Code 3**
+```C++
+int arr[2][3][3];
+```
+kode yang digunakan untuk mendeklarasikan array tiga dimensi dengan tipe data integer (bilangan bulat) dengan ukurang 2x3x3.
+
+**Code 4**
+```C++
+for (int x = 0; x < 2; x++)
+    {
+        for (int y = 0; y < 3; y++)
+        {
+            for (int z = 0; z < 3; z++)
+            {
+                cout << "Input Array[" << x << "][" << y << "][" << z << "] = ";
+                cin >> arr[x][y][z];
+            }
+        }
+        cout << endl;
+    }
+```
+Code diatas digunakan untuk menginput array. perulangan pertama pada variabel x dengan indeks 0 hingga 1 dikarenakan x < 2. jadi program akan berulang sampai mencapai 2 indeks yaitu indeks 0 dan 1. setiap perulangan selesai dieksekusi maka indek akan ditambah satu. begitupun dengan y dan z dengan indeks 0 hingga 2, jadi program akan berulang sampai mencampai indeks 2 yaitu indeks 0, 1, dan 2. setelah program dieksekusi maka akan mengulang dengan indeks ditambah satu. cout menampilkan pesan untuk meminta input elemen array pada posisi x, y, dan z yang sudah ditentukan. cin digunakan untuk mengambil input dari pengguna dan menyimpan dalam array pada posisi yang ditentukan oleh indeks x, y, dan z.
+
+perulangan pertama yang digunakan untuk mengatur indeks x dari 0 hingga 1. juga untuk mengontrol indeks array pada dimensi pertama. int x = 0 adalah mendeklarasikan variabel x sebagai integer dan menginisialisaikan dengan nilai 0. x < 2 digunakan agar perulangan akan terus berlanjut sampai nilai x kurang dari 2. x++ digunakan agar ketika loop selesai dieksekusi maka nilai x akan bertambah satu.
+
+**Code 5**
+```C++
+
+```
+perulangan kedua yang digunakan untuk mengatur indeks y dari 0 hingga 2. juga untuk mengontrol indeks array pada dimensi kedua. int y = 0 adalah mendeklarasikan variabel y sebagai integer dan menginisialisaikan dengan nilai 0. y < 3 digunakan agar perulangan akan terus berlanjut sampai nilai x adalah 2. x++ digunakan agar ketika loop selesai dieksekusi maka nilai x akan bertambah satu.
+
 
 ## Unguided 
 
 ### 1. [Soal]
 
 ```C++
-#include <iostream>
-using namespace std;
 
-int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
-    return 0;
-}
 ```
 #### Output:
 ![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
