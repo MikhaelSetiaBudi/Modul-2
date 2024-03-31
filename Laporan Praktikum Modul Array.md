@@ -400,11 +400,89 @@ Ketika program dijalankan maka kita akan dminta untuk memasukkan panjang array, 
 
 ## Unguided 
 
-### 1. [Soal]
+### 1. Buatlah program untuk menampilkan Output seperti berikut dengan data yang diinputkan oleh user!
+**```C++
+Data Array : 1 2 3 4 5 6 7 8 9 10
+Nomor Genap : 2, 4, 6, 8, 10,
+Nomor Ganjil : 1, 3, 5, 7, 9,**
+```
 
 ```C++
+#include <iostream>
+#include <vector>
+#include <sstream>
 
+using namespace std;
+
+int main() {
+    // Input data array
+    cout << "Masukkan data array: ";
+    string input;
+    getline(cin, input);
+
+    // Membaca data array dari string input
+    stringstream arr(input);
+    int num;
+    vector<int> data_array;
+    while (arr >> num) {
+        data_array.push_back(num);
+    }
+
+    // Inisialisasi vektor untuk nomor genap dan ganjil
+    vector<int> genap;
+    vector<int> ganjil;
+
+    // Perulangan melalui setiap elemen dalam array
+    for (int num : data_array) {
+        // Mengecek apakah nomor genap atau ganjil
+        if (num % 2 == 0) {
+            genap.push_back(num);
+        } else {
+            ganjil.push_back(num);
+        }
+    }
+
+    // Tampilkan hasil
+    cout << "Data Array: ";
+    for (int num : data_array) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    cout << "Nomor Genap: ";
+    for (int num : genap) {
+        cout << num << ", ";
+    }
+    cout << endl;
+
+    cout << "Nomor Ganjil: ";
+    for (int num : ganjil) {
+        cout << num << ", ";
+    }
+    cout << endl;
+
+    return 0;
+}
+
+
+// Mikhael Setia Budi
+// 2311110033
+//copyright@MikhaelS.B
 ```
+
+**Code 1**
+```C++
+#include <iostream>
+#include <vector>
+#include <sstream>
+```
+code diatas digunakan untuk mendefinisikan header yang diperluan untuk fungsi input-output standar, vector, dan stringstream.
+
+**Code 2**
+```C++
+
+
+
 #### Output:
 ![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
 
