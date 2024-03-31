@@ -334,9 +334,69 @@ digunakan sebagai fungsi utama dari program C++. program berjalan dalam fungsi i
 int maks, a, i = 1, lokasi;
     cout << "Masukkan panjang array: ";
     cin >> a;
-    int array[a];
-    cout << "Masukkan " << a << " angka\n";
 ```
+code diatas digunakan untuk menginput panjang array dengan variabel maks digubakan untuk menyimpan nilai maksimum dengan tipe data integer. variabel a digunakan untuk menyimpan panjang array. i = 1 adalah variabel i yang digunakan untuk loop dengan nilai awalnya 1. lokasi merupakan variabel yang digunakan untuk menyimpan lokasi indeks dari nilai maksimum dalam array. cout dan cin digunakan untuk menanyakan panjang array yang akan diinputkan oleh pengguna lalu menyimpannya dalam variabel a.
+
+**Code 4**
+```C++
+int array[a];
+```
+code diatas digunakan untuk mendeklarasikan array dengan panjang a yang diinputkan sebelumnya. untuk tipe data adalah tipe data integer.
+
+**Code 5**
+```C++
+    cout << "Masukkan " << a << " angka\n";
+    for (i = 0; i < a; i++)
+    {
+        cout << "Array ke-" << (i) << ": ";
+        cin >> array[i];
+    }
+```
+code diatas digunakan untuk mengisi nilai ke dalam array dengan perulangan sebanyak panjang array (a) yang telah ditentukan. pengguna akan diberikan pesan untuk memasukkan sejumlah nilai tertentu (sebanyak a yang telah diinputkan) dimasukkan kedalam array. perulangan for akan berjalan sebanyak panjang array yang diinpukan oleh pengguna (a). setiap i dieksekusi maka array akan ditambah satu. dengan menggunakan loop for maka program akan berulang meminta pengguna untuk menginputkan angka ke dalam array sampai array terisi penuh sesuai dengan panjang array yang telah diinputkan.
+
+**Code 6**
+```C++
+maks = array[0];
+    for ( i = 0; i < a; i++)
+    {
+        if (array[i] > maks)
+        {
+            maks = array[i];
+            lokasi = i;
+        }
+        
+    }
+```
+code diatas menggunakan loop untuk membandingkan setiap elemen array dengan nilai maksimum yang yang ditentukan sebelumnya. variabel maks diisi dengan nilai dari elemen pertama dalam array(array[0]). ini digunakan nilai awal untuk perbandingan nilai maksimum. loop for akan berjalan melalui setiap elemen dalam array. if digunakan untuk membuat kondisi yang memeriksa apakah nilai pada indeks ke i lebih besar dari nilai maksimum (maks). maks = array[i] digunakan jika nilai pada indeks ke i lebih besar dari nilai maksumumnya, jika lebih besar maka nilai maksimum (maks) akan diganti dengan nilai baru. variabel lokasi akan berubah dengan indeks i dimana nilai maksimum telah ditemukan, agar dapat melacak lokasi indeks nilai maksimum.
+
+**Code 7**
+```C++
+ cout << "Nilai maksimum adalah " << maks << " berada di Array ke " << lokasi << endl;
+```
+digunakan untuk menampilkan nilai maksimum dengan mencantumkan variabel maks dan lokasi array nilai maksimum dengan mencantumkan variabel lokasi.
+
+#### Output
+```C++
+Masukkan panjang array: 5
+Masukkan 5 angka
+Array ke-0: 4
+Array ke-1: 5
+Array ke-2: 8
+Array ke-3: 2
+Array ke-4: 7
+Nilai maksimum adalah 8 berada di Array ke 2
+```
+Ketika program dijalankan maka kita akan dminta untuk memasukkan panjang array, lalu kita akan diminta untuk memasukan angka dimulai dari indeks ke 0 (array dimulai dari indeks ke 0) hingga 4. setelah itu maka nilai maksimal akan ditemukan dengan lokasi array nilai tersebut.
+
+#### Full code Screenshot:
+
+![alt text](https://github.com/MikhaelSetiaBudi/Praktikum-Algoritma-Struktur-Data-Modul-2-Array/blob/master/Modul%202%20Alstrukdat/Code%20Guided%202%20Array.png?raw=true)
+
+#### Output Screenshot:
+
+![alt text](https://github.com/MikhaelSetiaBudi/Praktikum-Algoritma-Struktur-Data-Modul-2-Array/blob/master/Output%20Modul%202%20Alstrukdat/Output%20Guided%202%20Array.png?raw=true)
+
+
 
 ## Unguided 
 
