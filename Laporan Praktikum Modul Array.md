@@ -401,11 +401,13 @@ Ketika program dijalankan maka kita akan dminta untuk memasukkan panjang array, 
 ## Unguided 
 
 ### 1. Buatlah program untuk menampilkan Output seperti berikut dengan data yang diinputkan oleh user!
-**```C++
-Data Array : 1 2 3 4 5 6 7 8 9 10
-Nomor Genap : 2, 4, 6, 8, 10,
-Nomor Ganjil : 1, 3, 5, 7, 9,**
-```
+
+**Data Array : 1 2 3 4 5 6 7 8 9 10**
+
+**Nomor Genap : 2, 4, 6, 8, 10,**
+
+**Nomor Ganjil : 1, 3, 5, 7, 9,**
+
 
 ```C++
 #include <iostream>
@@ -519,16 +521,489 @@ for (int num : data_array) {
         }
     }
 ```
-membuat dua vektor genap dan ganjil untuk menyimpan angka-angka genap dan ganjil yang diinputkan oleh pengguna
+membuat dua vektor genap dan ganjil untuk menyimpan angka-angka genap dan ganjil yang diinputkan oleh pengguna. program melakukan perulangan melalui setiap elemen pada vektor data_array. jika angka tersebut genap maka dimasukkan ke dalam vektor genap, lalu jika ganjil maka dimasukkan ke dalam vektor ganjil dengan mengecek apakah angka pada data array ganjil atau genap.
+
+**Code 6**
+```C++
+cout << "Data Array: ";
+    for (int num : data_array) {
+        cout << num << " ";
+    }
+    cout << endl;
+```
+program mencetak pesan Data Array, lalu menggunakan looping for untuk mengakses elemen num dalam vektor data_array. setiap elemen num dicetak ke layar diikuti dengan spasi. setelah selesai melakukan perulangan semua elemen, program mencetak baris baru dengan code endl
+
+**Code 7**
+```C++
+    cout << "Nomor Genap: ";
+    for (int num : genap) {
+        cout << num << ", ";
+    }
+    cout << endl;
+```
+program mencetak pesan Nomor Genap, lalu menggunakan loop for untuk mengakses semua elemen num dalam vektor genap. semua elemen num dicetak ke layar, diikuti dengan koma dan spasi. seteleh melakukan perulangan pada semua elemen, program mencetak baris baru dengan menggunakan code endl.
+
+**Code 8**
+```C++
+    cout << "Nomor Ganjil: ";
+    for (int num : ganjil) {
+        cout << num << ", ";
+    }
+    cout << endl;
+```
+program mencetak pesan Nomor Ganjil, lalu menggunakan loop for untuk mengakses semua elemen num dalam vektor ganjil. semua elemen num dicetak ke layar, diikuti dengan koma dan spasi. seteleh melakukan perulangan pada semua elemen, program mencetak baris baru dengan menggunakan code endl.
+
+**code 9**
+```C++
+return 0;
+```
+code tersebut menunjukan bahwa program telah berhasil dijalankan tanpa masalah
 
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
-
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+```C++
+Masukkan data array: 1 2 3 4 5 6 7 8 9 10
+Data Array: 1 2 3 4 5 6 7 8 9 10
+Nomor Genap: 2, 4, 6, 8, 10,
+Nomor Ganjil: 1, 3, 5, 7, 9,
+```
+ketika program dijalankan maka akan diminta untuk memasukkan data array, lalu program akan memisahkan antara nomor ganjil dan nomor genap.
 
 #### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/41e9641c-ad4e-4e50-9ca4-a0215e336b04)
+![alt text](https://github.com/MikhaelSetiaBudi/Praktikum-Algoritma-Struktur-Data-Modul-2-Array/blob/master/Modul%202%20Alstrukdat/Code%20Unguided%201%20Array.png?raw=true)
 
+#### Output Screenshot:
+![alt text](https://github.com/MikhaelSetiaBudi/Praktikum-Algoritma-Struktur-Data-Modul-2-Array/blob/master/Output%20Modul%202%20Alstrukdat/Output%20Unguided%201%20Array.png?raw=true)
+
+### 2. Buatlah program Input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!
+
+```C++
+#include <iostream>
+using namespace std;
+
+int main() {
+    int ukuran_x, ukuran_y, ukuran_z;
+
+    cout << "Masukkan ukuran array dalam dimensi x: ";
+    cin >> ukuran_x;
+
+    cout << "Masukkan ukuran array dalam dimensi y: ";
+    cin >> ukuran_y;
+
+    cout << "Masukkan ukuran array dalam dimensi z: ";
+    cin >> ukuran_z;
+
+    // Deklarasi array
+    int arr[ukuran_x][ukuran_y][ukuran_z];
+
+    // Input elemen
+    for (int x = 0; x < ukuran_x; x++) 
+    {
+        for (int y = 0; y < ukuran_y; y++) 
+        {
+            for (int z = 0; z < ukuran_z; z++) 
+            {
+                cout << "Input Array[" << x << "][" << y << "][" << z << "] = ";
+                cin >> arr[x][y][z];
+            }
+        }
+         cout << endl;
+    }
+    // Output Array
+    for (int x = 0; x < ukuran_x; x++) 
+    {
+        for (int y = 0; y < ukuran_y; y++) 
+        {
+            for (int z = 0; z < ukuran_z; z++) 
+            {
+                cout << "Data Array[" << x << "][" << y << "][" << z << "] = " << arr[x][y][z] << endl;
+            }
+        }
+    }
+    cout << endl;
+    // Tampilan array
+    for (int x = 0; x < ukuran_x; x++) 
+    {
+        for (int y = 0; y < ukuran_y; y++) 
+        {
+            for (int z = 0; z < ukuran_z; z++) 
+            {
+                cout << arr[x][y][z] << ends;
+            }
+            cout << endl;
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+// Mikhael Setia Budi
+// 2311110033
+//copyright@MikhaelS.B
+```
+
+**Code 1**
+```C++
+#include <iostream>
+using namespace std;
+```
+code diatas digunakan agar dapat melakukan input-output standar. using namespace std; digunakan agar dapat menggunakan fungsi dari namespace std.
+
+**Code 2**
+```C++
+int main() {
+}
+```
+code diatas merupakan fungsi utama dari program. semua program akan dieksekusi dalam int main()
+
+**Code 3**
+```C++
+int ukuran_x, ukuran_y, ukuran_z;
+```
+code diatas digunakan untuk menyimpan ukuran array tiga dimensi yaitu ukuran_x, ukuran_y, dan ukuran_z
+
+**Code 4**
+```C++
+cout << "Masukkan ukuran array dalam dimensi x: ";
+    cin >> ukuran_x;
+
+    cout << "Masukkan ukuran array dalam dimensi y: ";
+    cin >> ukuran_y;
+
+    cout << "Masukkan ukuran array dalam dimensi z: ";
+    cin >> ukuran_z;
+```
+memunculkan pesan ke pengguna untuk memasukkan ukuran array tiga dimensi: x,y,z. ukurang tiga dimensi ini akan digunakan untuk mendeklarasikan array.
+
+**Code 5**
+```C++
+int arr[ukuran_x][ukuran_y][ukuran_z];
+```
+code diatas digunakan untuk mendeklarasikan array tiga dimensi dengan ukuran yang ditentukan oleh pengguna.
+
+**Code 6**
+```C++
+for (int x = 0; x < ukuran_x; x++) 
+    {
+        for (int y = 0; y < ukuran_y; y++) 
+        {
+            for (int z = 0; z < ukuran_z; z++) 
+            {
+                cout << "Input Array[" << x << "][" << y << "][" << z << "] = ";
+                cin >> arr[x][y][z];
+            }
+        }
+         cout << endl;
+    }
+```
+code diatas digunakan untuk meminta pengguna memasukkan nilai untuk setiap elemen array dalam tiga dimensi. variabel x, y, dan z digunakan untuk mengontrol perulangan pada dimensi x, y, dan z. looping ini akan berjalan dari 0 sampai ukuran_x, ukuran_y, dan ukuran_z dikurangi 1 dikarenakan dalam bentuk indeks.cout dalam program diatas digunakan untuk program mencetak pesan untuk meminta pengguna memasukkan nilai untuk elemen array yang sedan dieksekusi, lalu akan disimpan dalam arr pada indeks sesuai dengan variabel x, y, dan z. setelah selesai mengisi seluruh elemen maka program akan menampilkan baris baru untuk membuat tampilan lebih tersetruktur.
+
+**Code 7**
+```C++
+for (int x = 0; x < ukuran_x; x++) 
+    {
+        for (int y = 0; y < ukuran_y; y++) 
+        {
+            for (int z = 0; z < ukuran_z; z++) 
+            {
+                cout << "Data Array[" << x << "][" << y << "][" << z << "] = " << arr[x][y][z] << endl;
+            }
+        }
+    }
+    cout << endl;
+```
+code diatas digunakan untuk mencetak kembali nilai-nilai yang telah dimasukkan ke dalam array tiga dimensi. variabel x, y, dan z digunakan untuk mengontrol perulangan pada dimensi x, y, dan z. looping ini akan berjalan dari 0 sampai ukuran_x, ukuran_y, dan ukuran_z dikurangi 1 dikarenakan dalam bentuk indeks. cout digunakan untuk mencetak pesan yang menunjukkan indeks array x, y, dan z dan nilai dari elemen array tersebut. setelah selesai mengisi seluruh elemen maka program akan menampilkan baris baru untuk membuat tampilan lebih tersetruktur.
+
+**Code 8**
+```C++
+ for (int x = 0; x < ukuran_x; x++) 
+    {
+        for (int y = 0; y < ukuran_y; y++) 
+        {
+            for (int z = 0; z < ukuran_z; z++) 
+            {
+                cout << arr[x][y][z] << ends;
+            }
+            cout << endl;
+        }
+        cout << endl;
+    }
+```
+code diatas digunakan untuk mencetak kembali nilai-nilai array tetapi tanpa pesan yang terkait dengan lokasi elemen dalam array. variabel x, y, dan z digunakan untuk mengontrol perulangan pada dimensi x, y, dan z. looping ini akan berjalan dari 0 sampai ukuran_x, ukuran_y, dan ukuran_z dikurangi 1 dikarenakan dalam bentuk indeks. cout digunakan untuk mencetak nilai dari elemen array pada indeks array x, y, dan z dan nilai dari elemen array tersebut. ends digunakan untuk menambahkan spasi di angtara nilai elemen. setelah selesai mengisi seluruh elemen maka program akan menampilkan baris baru untuk membuat tampilan lebih tersetruktur.
+
+**Code 9**
+```C++
+return 0;
+```
+code tersebut menunjukan bahwa program telah berhasil dijalankan tanpa masalah
+
+#### Output:
+```C++
+Masukkan ukuran array dalam dimensi x: 2
+Masukkan ukuran array dalam dimensi y: 2
+Masukkan ukuran array dalam dimensi z: 2
+Input Array[0][0][0] = 1
+Input Array[0][0][1] = 4
+Input Array[0][1][0] = 2
+Input Array[0][1][1] = 5
+
+Input Array[1][0][0] = 3
+Input Array[1][0][1] = 2
+Input Array[1][1][0] = 3
+Input Array[1][1][1] = 5
+
+Data Array[0][0][0] = 1
+Data Array[0][0][1] = 4
+Data Array[0][1][0] = 2
+Data Array[0][1][1] = 5
+Data Array[1][0][0] = 3
+Data Array[1][0][1] = 2
+Data Array[1][1][0] = 3
+Data Array[1][1][1] = 5
+
+14
+25
+
+32
+35
+```
+program akan meminta untuk menginputkan ukuran array pada dimensi x, y, dan z. setelah itu pengguna akan menginputkan nilai pada setiap array. setelah array z terpenuhi maka akan beralih ke array y,dan seterusnya. setelah semua diinputkan maka akan memunculkan data array yang telah diinputkan, laluakan memunculkan angka array tanpa pesan data array.
+
+#### Full code Screenshot:
+![alt text](https://github.com/MikhaelSetiaBudi/Praktikum-Algoritma-Struktur-Data-Modul-2-Array/blob/master/Modul%202%20Alstrukdat/Code%20Unguided%202%20Array.png?raw=true)
+
+#### Output Screenshot:
+![alt text](https://github.com/MikhaelSetiaBudi/Praktikum-Algoritma-Struktur-Data-Modul-2-Array/blob/master/Output%20Modul%202%20Alstrukdat/Output%20Unguided%202%20Array.png?raw=true)
+
+### 3. Buatlah program menu untuk mencari nilai Maksimum, Minimum dan Nilai rata – rata dari suatu array dengan input yang dimasukan oleh user!
+
+```C++
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    int array;
+    cout << "Masukkan panjang array: ";
+    cin >> array;
+
+    vector<int> data_array(array);
+
+    // Input nilai-nilai array
+    cout << "Masukkan nilai-nilai array:" << endl;
+    for (int arr = 0; arr < array; arr++) {
+        cout << "Array ke-" << arr << ": ";
+        cin >> data_array[arr];
+    }
+
+    // Menampilkan menu untuk mencari nilai pada array
+    cout << "Menu:" << endl;
+    cout << "1. Mencari nilai maksimum array" << endl;
+    cout << "2. Mencari nilai minimum array" << endl;
+    cout << "3. Mencari nilai rata-rata array" << endl;
+
+    // Meminta pengguna untuk memilih opsi menu
+    int choice;
+    cout << "Pilih opsi: ";
+    cin >> choice;
+
+    // Melakukan operasi sesuai pilihan yang diinputkan pengguna
+    switch (choice) {
+        case 1:
+            // Mencari nilai maksimum
+            if (!data_array.empty()) {
+                int maksimum = *max_element(data_array.begin(), data_array.end());
+                cout << "Nilai maksimum: " << maksimum << endl;
+            } else {
+                cout << "Array kosong." << endl;
+            }
+            break;
+        case 2:
+            // Mencari nilai minimum
+            if (!data_array.empty()) {
+                int minimum = *min_element(data_array.begin(), data_array.end());
+                cout << "Nilai minimum: " << minimum << endl;
+            } else {
+                cout << "Array kosong." << endl;
+            }
+            break;
+        case 3:
+            // Mencari nilai rata-rata
+            if (!data_array.empty()) {
+                int total = 0;
+                for (int num : data_array) {
+                    total += num;
+                }
+                double rata_rata = static_cast<double>(total) / data_array.size();
+                cout << "Nilai rata-rata: " << rata_rata << endl;
+            } else {
+                cout << "Array kosong." << endl;
+            }
+            break;
+        default:
+            cout << "Pilihan tidak valid." << endl;
+    }
+
+    return 0;
+}
+
+
+// Mikhael Setia Budi
+// 2311110033
+//copyright@MikhaelS.B
+```
+
+**Code 1**
+```C++
+#include <iostream>
+#include <vector>
+#include <algorithm>
+```
+code diatas digunakan untuk melakukan inpu-output standar dengan <iostream>. vectordigunakan untuk menyimpan urutan nilai dalam array. algorithm digunakan untuk melakukan operasi algoritma seperti pencarian nilai maksimum dan minimum.
+
+**Code 2**
+```C++
+using namespace std;
+```
+code diatas digunakan untuk menggunakan fungsi dari namespace std.
+
+**Code 3**
+```C++
+int main() {
+}
+```
+code diatas merupakan fungsi utama dari program. semua program akan dieksekusi dalam int main()
+
+**Code 4**
+```C++
+int array;
+    cout << "Masukkan panjang array: ";
+    cin >> array;
+
+vector<int> data_array(array);
+```
+variabel array digunakan untuk menyimpan panjang array yang dimasukkan oleh pengguna. cout digunakan untuk menampilkan pesan kepada pengguna untuk menginputkan panjang array lalu disimpan dalam variabel array. vector digunakan untuk menyimpan nilai-nilai array yang dimasukkan oleh pengguna, ukuran vektor ditentukan oleh nilai array.
+
+**Code 5**
+```C++
+cout << "Masukkan nilai-nilai array:" << endl;
+    for (int arr = 0; arr < array; arr++) {
+        cout << "Array ke-" << arr << ": ";
+        cin >> data_array[arr];
+    }
+```
+pengguna diminta untuk memasukkan nilai array satu per satu. setiap nilai yang dimasukkan akan disimpan dalam vector data_array. loop for digunakan untuk perulangan melalui setiap elemen array. variabel arr digunakan sebagai counter untuk indeks array. setiap kali perulangan dilakukan, program mencetak pesan Array ke- diikuti dengan nomor indeks arr. lalu nilai tersebut akan disimpan dalam vektor data_array pada indeks yang sesuai.
+
+**Code 6**
+```C++
+ cout << "Menu:" << endl;
+    cout << "1. Mencari nilai maksimum array" << endl;
+    cout << "2. Mencari nilai minimum array" << endl;
+    cout << "3. Mencari nilai rata-rata array" << endl;
+```
+code diatas digunakan untuk menampilkan menu pilihan untuk pengguna.
+
+**Code 7**
+```C++
+int choice;
+    cout << "Pilih opsi: ";
+    cin >> choice;
+```
+pengguna diminta untuk memilih salah satu opsi dari menu yang ditampilkan dengan tipe data integer. variabel choice dideklarasikan untuk menyimpan pilihan yang dimasukkan pengguna. program mencetak pesan Pilih opsi untuk memberitahu kepada pengguna untuk memasukkan pilihan yang akan dicari. lalu dimasukkan ke dalam variabel choise dengan menggunakan cin.
+
+**Code 8**
+```C++
+switch (choice) {
+        case 1:
+            // Mencari nilai maksimum
+            if (!data_array.empty()) {
+                int maksimum = *max_element(data_array.begin(), data_array.end());
+                cout << "Nilai maksimum: " << maksimum << endl;
+            } else {
+                cout << "Array kosong." << endl;
+            }
+            break;
+        case 2:
+            // Mencari nilai minimum
+            if (!data_array.empty()) {
+                int minimum = *min_element(data_array.begin(), data_array.end());
+                cout << "Nilai minimum: " << minimum << endl;
+            } else {
+                cout << "Array kosong." << endl;
+            }
+            break;
+        case 3:
+            // Mencari nilai rata-rata
+            if (!data_array.empty()) {
+                int total = 0;
+                for (int num : data_array) {
+                    total += num;
+                }
+                double rata_rata = static_cast<double>(total) / data_array.size();
+                cout << "Nilai rata-rata: " << rata_rata << endl;
+            } else {
+                cout << "Array kosong." << endl;
+            }
+            break;
+        default:
+            cout << "Pilihan tidak valid." << endl;
+    }
+```
+code switch diatas digunakan untuk mengecek apakah vektor data_array tidak kosong. jika terdapat angka maka program akan mencari case mana yang sesuai dengan pilihan yang diinputkan pengguna, setelah menemukan case yang sesuai maka case tersebut akan dioperasikan dari pilihan 1, 2, dan 3. setelah itu hasil operasi akan ditampilkan ke pengguna. jika vektor data_array kosong maka akan muncul pesan array kosong. jika pengguna memilih nomor 1 maka program akan memeriksa apakah data)array tidak kosong menggunakan data_array.empty(). jika terdapat nilai pada array maka program akan menggunakan max_element dari library <algorithm> untuk menemukan nilai maksimum dalam array, begitupun dengan case 2 mencari nilai minimum. jika terdapat nilai pada arry maka program menghitung total dari semua elemen array menggunakan perulangan for. setelah mendapatkan nilai total maka program akan membaginya dengan jumlah elemen untuk mendapatkan rata-ratanya. jika nilai yang diinputkan tidak sesuai maka akan muncul Pilihan tidak valid.
+
+**Code 8**
+```C++
+ return 0;
+```
+code tersebut menunjukan bahwa program telah berhasil dijalankan tanpa masalah
+
+#### Output:
+```C++
+Masukkan panjang array: 3
+Masukkan nilai-nilai array:
+Array ke-0: 2
+Array ke-1: 3
+Array ke-2: 4
+Menu:
+1. Mencari nilai maksimum array
+2. Mencari nilai minimum array
+3. Mencari nilai rata-rata array
+Pilih opsi: 1
+Nilai maksimum: 4
+
+Masukkan panjang array: 3
+Masukkan nilai-nilai array:
+Array ke-0: 2
+Array ke-1: 3
+Array ke-2: 4
+Menu:
+1. Mencari nilai maksimum array
+2. Mencari nilai minimum array
+3. Mencari nilai rata-rata array
+Pilih opsi: 2
+Nilai minimum: 2
+
+Masukkan panjang array: 3
+Masukkan nilai-nilai array:
+Array ke-0: 2
+Array ke-1: 3
+Array ke-2: 4
+Menu:
+1. Mencari nilai maksimum array
+2. Mencari nilai minimum array
+3. Mencari nilai rata-rata array
+Pilih opsi: 3
+Nilai rata-rata: 3
+```
+output program diatas akan menampilkan beberapa case, dimana pengguna diminta untuk memasukkan panjang array. setelah itu masukan nilai array dari masing masing indeks. lalu pilih menu yang ingin digunakan. maka akan muncul hasilnya
+
+#### Full code Screenshot:
+![alt text](https://github.com/MikhaelSetiaBudi/Praktikum-Algoritma-Struktur-Data-Modul-2-Array/blob/master/Modul%202%20Alstrukdat/Code%20Unguided%203%20Array.png?raw=true)
+
+#### Output Screenshot:
+![alt text](https://github.com/MikhaelSetiaBudi/Praktikum-Algoritma-Struktur-Data-Modul-2-Array/blob/master/Output%20Modul%202%20Alstrukdat/Output%20Unguided%203%20Array.png?raw=true)
 
 ## Kesimpulan
 Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
