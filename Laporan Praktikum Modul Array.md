@@ -480,8 +480,46 @@ code diatas digunakan untuk mendefinisikan header yang diperluan untuk fungsi in
 
 **Code 2**
 ```C++
+using namespace std;
+```
+using namespace std digunakan untuk menggunakan namespace std.
 
+**Code 3**
+```C++
+int main() {
+    // Input data array
+    cout << "Masukkan data array: ";
+    string input;
+    getline(cin, input);
+```
+code diatas digunakan untuk mencetak pesan untuk meminta pengguna memasukkan data array. membaca baris input yang dimasukkan oleh pengguna menggunakan getline() lalu menyimpannya dalam variabel input dengan tipe data string.
 
+**Code 4**
+```C++
+stringstream arr(input);
+    int num;
+    vector<int> data_array;
+    while (arr >> num) {
+        data_array.push_back(num);
+    }
+```
+code stringstream arr(input) digunakan untuk menggubah string input menjadi stringstream sehingga dapat melakukan operasi streaming. lalu code diatas juga mendeklarasikan variabel num untuk menyimpan tipe angka yang dikonversi, untuk tipe data adalah integer. membuat vektor data_array untuk menyimpan angka-angka yang diinputkan oleh pengguna, memungkinkan program untuk memproses data array yang dimasukkan secara dinamis. melakukkan looping dengan menggunakan while untuk memasukan setiap angka ke dalam vektor data_array. loop while akan berjalan selama proses pemmbacaan stringstream arr berhasil, nilai dari stringstream akan dibaca ke dalam variabel num. setelah itu nilai tersebut akan ditambahkan ke dalam vektor data_array, sehingga bektor data_array akan terus bertambah seiring berhasilnya pembacaan nilai dari stringstream
+
+**code 5**
+```C++
+vector<int> genap;
+vector<int> ganjil;
+
+for (int num : data_array) {
+        // Mengecek apakah nomor genap atau ganjil
+        if (num % 2 == 0) {
+            genap.push_back(num);
+        } else {
+            ganjil.push_back(num);
+        }
+    }
+```
+membuat dua vektor genap dan ganjil untuk menyimpan angka-angka genap dan ganjil yang diinputkan oleh pengguna
 
 #### Output:
 ![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
