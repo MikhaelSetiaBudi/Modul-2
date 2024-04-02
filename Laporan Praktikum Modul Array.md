@@ -3,7 +3,7 @@
 
 ## Dasar Teori
 
-Array merupakan struktur data yang paling dasar. Berikut ini
+Array merupakan struktur data yang paling dasar. Sebuah array dapat dibayangkan sebagai sekumpulan kotak yang menyimpan sekumpulan elemen bertipe sama secara berurutan (sequential) di dalam memori komputer. Array juga dapat digambarkan sebagai elemen-elemen yang disusun secara vertikal sehingga dinamai tabel. Setiap elemen array data diacu melalui indeksnya [1]. Berikut ini
 adalah jenis-jenis array :
 
 **1) Array Satu Dimensi**
@@ -1005,8 +1005,8 @@ output program diatas akan menampilkan beberapa case, dimana pengguna diminta un
 #### Output Screenshot:
 ![alt text](https://github.com/MikhaelSetiaBudi/Praktikum-Algoritma-Struktur-Data-Modul-2-Array/blob/master/Output%20Modul%202%20Alstrukdat/Output%20Unguided%203%20Array.png?raw=true)
 
-## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+## Kesimpulana
+array merupakan struktur data paling dasar, terdapat 5 jenis array yaitu array satu dimensi, array dua dimensi, array multidimensi, array empat dimensi, array lima dimensi. array sangat penting karena dalam array dapat menyimpan elemen data yang nantinya akan digunakan dalam struktur data. jika data array sudah disimpan maka ketika kita akan menggunakan data tersebut baik itu untuk mencari data terbesar maupun terkecil, mencari rata rata dari semua data dalam array, dan menampilkan data dalam array sesuai dengan indeksnya.
 
 ## Referensi
-[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
+[1] J. Sihombing, “Penerapan Stack Dan Queue Pada Array Dan Linked List Dalam Java,” J. Ilm. Infokom, vol. 7, no. 2, pp. 15–24, 2019.
